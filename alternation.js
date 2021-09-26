@@ -61,7 +61,7 @@ function showAndHideStuff(){
 function upgradeEffects(){
     for (let i=0; i<4; i++){
         if (data.destabAmounts[3].gte(1)){
-            data.upgradeEffects[i] = data.destabAmounts[3].log(1.1).plus(1.3)
+            data.upgradeEffects[i] = data.destabAmounts[3].log(1.1).plus(1.3).times(i==0?2:1)
         }
         else data.upgradeEffects[i] = new Decimal(2)
     }
