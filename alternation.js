@@ -82,3 +82,12 @@ function produceDestabs(diff){
         data.destabProductions[a] = data.destabProductions[a].plus(data.destabProductions[a+1].times(diff).times(100))
     }
 }
+function calculateProductions(){
+    for (let i=0; i<data.destabIncreases.length; i++){
+        if (data.hasUpgrade[i]) data.destabIncreases[i] = new Decimal(1).times(data.upgradeEffects[i])
+        else data.destabIncreases[i] = new Decimal(1)
+    }
+    for(let i=0; i<data.destabProductions.length; i++){
+        data.destabProductions[i] = data.destabAmounts[i].times(data.destabIncreases[i])
+    }
+}
