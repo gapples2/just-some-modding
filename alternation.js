@@ -1,3 +1,5 @@
+// go to alternation, open the console, and copy & paste all this code in
+
 if(!data.timeSinceUpdate)data.timeSinceUpdate = Date.now()
 function fixAllDestabHeights(){
     let d = document.getElementsByClassName("destabilizer")
