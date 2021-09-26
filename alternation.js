@@ -5,6 +5,7 @@ function fixAllDestabHeights(){
         d[x].style.height = "90px"
     }
 }
+fixAllDestabHeights()
 function updateHTML(){
     //halfPoints displays
     document.getElementById("halfPointDisplay").innerHTML = `You have ${format(data.halfPoints)} Half Points`
